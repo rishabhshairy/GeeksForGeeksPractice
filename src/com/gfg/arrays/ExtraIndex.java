@@ -1,6 +1,6 @@
-package com.arrays.gfg;
+package com.gfg.arrays;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class ExtraIndex {
 
