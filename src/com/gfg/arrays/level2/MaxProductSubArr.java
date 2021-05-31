@@ -24,23 +24,38 @@ public class MaxProductSubArr {
 		}
 	}
 
-	private static int maxSubArrProduct(int[] arr, int n) {
+	private static long maxSubArrProduct(int[] arr, int n) {
 		// TODO Auto-generated method stub
-		int maxSoFar = Integer.MIN_VALUE;
-		int maxEnd = arr[0];
+		long maxEndingHere = 1;
+		long minEndingHere = 1;
 
-		for (int i : arr) {
-			if (i == 0 || maxEnd == 0) {
-				continue;
+		long flag = 0;
+		long maxSoFar = 0;
+
+		for (int i = 0; i < arr.length; i++) {
+
+			if (arr[i] > 0) {
+				maxEndingHere = maxEndingHere * arr[i];
+				minEndingHere = Math.min(minEndingHere * arr[i], 1);
+				flag = 1;
+
+			} else if (arr[i] == 0) {
+				maxEndingHere = 1;
+				minEndingHere = 1;
+			} else {
+				long temp = maxEndingHere;
+				maxEndingHere = Math.max(minEndingHere * arr[i], 1);
+				minEndingHere = temp * arr[i];
 			}
-			maxEnd = maxEnd * i;
-			System.out.println("max end val -->" + maxEnd);
-			if (maxSoFar < maxEnd) {
-				maxSoFar = maxEnd;
+
+			// update maxSoFar
+			if (maxSoFar < maxEndingHere) {
+				maxSoFar = maxEndingHere;
 			}
-			if (maxEnd < 0) {
-				maxEnd = 0;
-			}
+		}
+
+		if (flag == 0 && maxSoFar == 0) {
+			return 0;
 		}
 		return maxSoFar;
 	}
