@@ -24,10 +24,17 @@ public class ChoclateDistribution {
     }
 
     private static long findMinDiff(ArrayList<Long> a, long n, long m) {
+        if(n==0 || m==0){
+            return 0;
+        }
+
         Collections.sort(a);
         long minDiff = Integer.MAX_VALUE;
+        if(n<m){
+            return -1;
+        }
 
-        for (int i = 0; i < a.size()-m; i++) {
+        for (int i = 0; i + m -1 < a.size(); i++) {
             int l = i;
             int r = l + (int) m - 1;
             minDiff = Math.min(minDiff, a.get(r) - a.get(l));
