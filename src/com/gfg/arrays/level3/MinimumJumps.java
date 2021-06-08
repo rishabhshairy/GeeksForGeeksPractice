@@ -2,7 +2,7 @@ package com.gfg.arrays.level3;
 
 public class MinimumJumps {
     public static void main(String[] args) {
-        int[] test = {1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9};
+        int[] test = {3, 2, 1, 0, 4};
         System.out.println(minJumps(test));
     }
 
@@ -12,7 +12,7 @@ public class MinimumJumps {
             return 0;
         }
 
-        if(arr[0]==0){
+        if (arr[0] == 0) {
             return -1;
         }
 
@@ -31,6 +31,7 @@ public class MinimumJumps {
             if (remainingSteps == 0) {
                 jump++;
 
+                // check whether a step is becoming zero or negative
                 if (i >= max) {
                     return -1;
                 }
