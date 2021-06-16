@@ -2,7 +2,7 @@ package com.interviewbit;
 
 public class VowelsConsonant {
     public static void main(String[] args) {
-        String s = "inttnikjmjbemrberk";
+        String s = "abec";
         System.out.println(solve(s));
     }
 
