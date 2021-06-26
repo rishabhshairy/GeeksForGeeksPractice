@@ -38,7 +38,23 @@ public class ReorderList {
         }
         return len;
     }
-
+    public ListNode reverseList(ListNode A, int B) {
+        ListNode curr = A;
+        int count = 0;
+        ListNode prev = null, next=null;
+        while(curr!= null && count < B){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+            count++;
+        }
+        if(next!= null){
+            ListNode ans = reverseList(next, B);
+            A.next = ans;
+        }
+        return prev;
+    }
     static ListNode reverseList(ListNode head) {
         ListNode curr = head, pre = null;
 
@@ -120,10 +136,74 @@ public class ReorderList {
                 currMore.next = node;
                 currMore = currMore.next;
             }
+            temp = temp.next;
         }
         currLess.next = more.next;
         return less.next;
 
+    }
+
+    public ListNode reverseBetween(ListNode head, int left, int right) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        ListNode temp = new ListNode(0);
+        ListNode pre = temp;
+        temp.next = head;
+
+        int i = 0;
+        while (i < left) {
+            pre = pre.next;
+            i++;
+        }
+        ListNode startRev = pre.next;
+        ListNode then = startRev.next;
+        i = 0;
+        while (i < right - left) {
+            ListNode preNext = pre.next;
+            ListNode thenNext = then.next;
+
+            pre.next = then;
+            then.next = preNext;
+            startRev.next = thenNext;
+            then = thenNext;
+
+            i++;
+        }
+
+
+        return temp.next;
+    }
+
+    public ListNode insertionSortLinkedList(ListNode head) {
+        ListNode currTemp = head;
+        ListNode sortedHead = null;
+
+        while (currTemp != null) {
+            ListNode next = currTemp.next;
+            sortedHead = sortedList(sortedHead, currTemp);
+            System.out.println(sortedHead.val);
+            currTemp = next;
+        }
+        return sortedHead;
+    }
+
+    private ListNode sortedList(ListNode sortedHead, ListNode newNode) {
+        if (sortedHead == null || sortedHead.val >= newNode.val) {
+            newNode.next = sortedHead;
+            return newNode;
+        } else {
+            ListNode curr = sortedHead;
+            while (curr.next != null && curr.next.val < newNode.val) {
+                curr = curr.next;
+            }
+            newNode.next = curr.next;
+            curr.next = newNode;
+            System.out.println(newNode.next.val);
+            System.out.println(curr.next.val);
+        }
+        return sortedHead;
     }
 }
 
