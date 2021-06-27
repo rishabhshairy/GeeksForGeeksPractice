@@ -38,23 +38,25 @@ public class ReorderList {
         }
         return len;
     }
+
     public ListNode reverseList(ListNode A, int B) {
         ListNode curr = A;
         int count = 0;
-        ListNode prev = null, next=null;
-        while(curr!= null && count < B){
+        ListNode prev = null, next = null;
+        while (curr != null && count < B) {
             next = curr.next;
             curr.next = prev;
             prev = curr;
             curr = next;
             count++;
         }
-        if(next!= null){
+        if (next != null) {
             ListNode ans = reverseList(next, B);
             A.next = ans;
         }
         return prev;
     }
+
     static ListNode reverseList(ListNode head) {
         ListNode curr = head, pre = null;
 
@@ -204,6 +206,44 @@ public class ReorderList {
             System.out.println(curr.next.val);
         }
         return sortedHead;
+    }
+
+    public ListNode evenReverse(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+        ListNode odd = head;
+        ListNode even = head.next;
+        ListNode prevOdd = null;
+
+        // seperating and reversing
+        while (odd != null && even != null) {
+
+            odd.next = even.next;
+            even.next = prevOdd;
+            odd = odd.next;
+            prevOdd = even;
+            if (odd != null) {
+                even = odd.next;
+            }
+        }
+
+        ListNode oddtemp = head;
+        ListNode eventemp = head.next;
+        ListNode temp = prevOdd; // head of even list
+
+        while (eventemp != null) {
+            oddtemp.next = prevOdd;
+            temp = prevOdd.next;
+            prevOdd.next = eventemp;
+            prevOdd = temp;
+            oddtemp = eventemp;
+            eventemp = eventemp.next;
+        }
+        if (prevOdd != null) {
+            oddtemp.next = prevOdd;
+        }
+        return head;
     }
 }
 
