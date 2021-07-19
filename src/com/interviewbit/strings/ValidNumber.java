@@ -1,4 +1,4 @@
-package com.interviewbit;
+package com.interviewbit.strings;
 
 public class ValidNumber {
     public static void main(String[] args) {

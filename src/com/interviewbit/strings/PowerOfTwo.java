@@ -1,4 +1,4 @@
-package com.interviewbit;
+package com.interviewbit.strings;
 
 import java.math.BigInteger;
 

@@ -1,4 +1,4 @@
-package com.interviewbit;
+package com.interviewbit.strings;
 
 public class MultiplyStrings {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.interviewbit;
+package com.interviewbit.strings;
 
 public class AddBinaryStrings {
     public static void main(String[] args) {
