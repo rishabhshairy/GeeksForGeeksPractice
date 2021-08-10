@@ -9,19 +9,23 @@ public class BinaryTreePaths {
         if (root == null) {
             return answer;
         }
-        String outLeft = root.val + "->";
         String outRight = "";
-        traverseRootToLeft(root, outLeft, answer);
+        traverseRootToLeft(root, outRight, answer);
         return answer;
     }
 
     private static void traverseRootToLeft(TreeNode root, String outLeft, List<String> answer) {
-        if (root == null) {
-            System.out.println(outLeft);
+        if (root.left == null && root.right == null) {
+            answer.add(outLeft + root.val);
             return;
         }
-        outLeft += outLeft + root.val + "->";
-        traverseRootToLeft(root.left, outLeft, answer);
+        if(root.left != null){
+            traverseRootToLeft(root.left, outLeft + root.val + "->", answer);
+        }
+        if(root.right != null){
+            traverseRootToLeft(root.right, outLeft + root.val + "->", answer);
+        }
+
 
     }
 }
