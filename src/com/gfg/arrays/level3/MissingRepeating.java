@@ -50,6 +50,7 @@ public class MissingRepeating {
 	}
 
 	static int[] fintTwoOptimal(int arr[], int n) {
+
 		int[] twoElem = new int[2];
 		// Repeating
 		for (int i = 0; i < arr.length; i++) {
