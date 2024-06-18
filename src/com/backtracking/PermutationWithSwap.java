@@ -25,6 +25,7 @@ public class PermutationWithSwap {
                 permutedList.add(num);
             }
             result.add(new ArrayList<>(permutedList));
+            System.out.println(result);
             return;
         }
 
@@ -37,6 +38,7 @@ public class PermutationWithSwap {
     }
 
     private static void swap(int[] arr, int num1, int num2) {
+        System.out.println("Swapping " + arr[num1] + " & " + arr[num2]);
         int temp = arr[num1];
         arr[num1] = arr[num2];
         arr[num2] = temp;
