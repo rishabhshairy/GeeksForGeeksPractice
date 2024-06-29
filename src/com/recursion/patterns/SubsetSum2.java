@@ -6,10 +6,16 @@ import java.util.List;
 
 /**
  * https://leetcode.com/problems/subsets-ii/
+ *
+ * Given an integer array nums of unique elements, return all possible
+ * subsets
+ *  (the power set).
+ *
+ * The solution set must not contain duplicate subsets. Return the solution in any order.
  */
 public class SubsetSum2 {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 2};
+        int[] arr = {1, 2, 3};
         System.out.println(subsetsWithDup(arr));
 
     }
