@@ -17,7 +17,8 @@ public class GenerateParans {
         int open = n;
         int close = n;
         String out = "";
-        solve(open, close, out, answer);
+//        solve(open, close, out, answer);
+        solveDiffApproach(0, 0, out, answer, n);
         return answer;
     }
 
@@ -36,6 +37,21 @@ public class GenerateParans {
             String op2 = out;
             op2 += ")";
             solve(open, close - 1, op2, answer);
+        }
+    }
+
+    public static void solveDiffApproach(int leftBracket, int rightBracket, String out, List<String> answer, int n) {
+        if (out.length() == 2 * n) {
+            answer.add(out);
+            return;
+        }
+
+        if (leftBracket < n) {
+            solveDiffApproach(leftBracket + 1, rightBracket, out + "(", answer, n);
+        }
+
+        if (rightBracket < leftBracket) {
+            solveDiffApproach(leftBracket, rightBracket + 1, out + ")", answer, n);
         }
     }
 }
