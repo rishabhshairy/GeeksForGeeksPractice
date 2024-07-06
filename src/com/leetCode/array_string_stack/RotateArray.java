@@ -17,13 +17,17 @@ public class RotateArray {
         if (nums == null || n == 0) {
             return;
         }
-/*        while (k-- > 0) {
-            int temp = nums[n - 1];
-            for (int i = n - 1; i > 0; i--) {
-                nums[i] = nums[i - 1];
+        // below is O(n^2) solution
+        /*
+            while (k-- > 0) {
+                int temp = nums[n - 1];
+                for (int i = n - 1; i > 0; i--) {
+                    nums[i] = nums[i - 1];
+                }
+                nums[0]=temp;
             }
-            nums[0]=temp;
-        }*/
+        */
+
         // Below will be O(n) solution
 
             k = k % n;
