@@ -1,4 +1,4 @@
-package com.geeksForGeeks.arrays;
+package com.geeksForGeeks.arrays.level1;
 
 public class ThirdSmallestInArray {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.geeksForGeeks.arrays;
+package com.geeksForGeeks.arrays.level1;
 
 //{ Driver Code Starts
 //Initial Template for Java
