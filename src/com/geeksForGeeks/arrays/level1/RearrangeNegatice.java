@@ -1,4 +1,4 @@
-package com.geeksForGeeks.arrays;
+package com.geeksForGeeks.arrays.level1;
 
 public class RearrangeNegatice {
 	public static void main(String[] args) {
