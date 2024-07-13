@@ -23,11 +23,13 @@ public class FirstLastInSorted {
         int end = nums.length - 1;
         while(start <= end){
             int mid = (start + end) / 2;
+            // First Search
             if(nums[mid] >= target){ // check on left always if first found
                 end = mid - 1;
             }else{
                 start = mid + 1;
             }
+            // then pick up answer
             if(nums[mid] == target) idx = mid;
         }
         return idx;
