@@ -21,6 +21,7 @@ public class SearchInRotatedAndSorted2 {
                 return true;
             }
             // reduce search space by checking below condition
+            // this is special condition for duplicate elements
             if (nums[low] == nums[mid] && nums[mid] == nums[high]) {
                 low++;
                 high--;
