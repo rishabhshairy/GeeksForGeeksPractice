@@ -4,6 +4,21 @@ public class SqrtOfX {
     public static void main(String[] args) {
         int n = 8;
         System.out.println(mySqrt(n));
+        System.out.println(sqrtBruteForce(n));
+    }
+
+    static int sqrtBruteForce(int x) {
+        int ans = 0;
+
+        for (int i = 1; i < x; i++) {
+            int val = i * i;
+            if (val <= x) {
+                ans = i;
+            } else {
+                break;
+            }
+        }
+        return ans;
     }
 
     static int mySqrt(int x) {
@@ -26,5 +41,30 @@ public class SqrtOfX {
                 left = mid + 1;
             }
         }
+    }
+
+    public static int sqrtN(long n) {
+        /*
+         * Write your code here
+         */
+        if (n == 0) {
+            return 0;
+        }
+
+        long low = 1;
+        long high = n;
+        long ans = 1;
+
+        while (low <= high) {
+            long mid = low + (high - low) / 2;
+
+            if (mid * mid <= n) {
+                ans = mid;
+                low = mid + 1;
+            } else {
+                high = mid - 1;
+            }
+        }
+        return (int) ans;
     }
 }
