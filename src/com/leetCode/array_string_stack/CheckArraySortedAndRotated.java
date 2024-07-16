@@ -13,7 +13,7 @@ package com.leetCode.array_string_stack;
 public class CheckArraySortedAndRotated {
     public static void main(String[] args) {
         CheckArraySortedAndRotated obj = new CheckArraySortedAndRotated();
-        int[] nums = {3, 4, 5, 1, 2, 6};
+        int[] nums = {3, 4, 5, 1, 2};
         System.out.println(obj.check(nums));
     }
 
@@ -21,6 +21,7 @@ public class CheckArraySortedAndRotated {
         int count = 0;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] > nums[(i + 1) % nums.length]) {
+                System.out.println(nums[i]);
                 count++;
             }
         }
