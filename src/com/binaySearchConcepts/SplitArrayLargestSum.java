@@ -43,8 +43,10 @@ public class SplitArrayLargestSum {
         for (Integer currNum :
                 nums) {
             if (currMaxSum + currNum <= num) {
+                //insert element to current subarray
                 currMaxSum += currNum;
             } else {
+                //insert element to next subarray
                 currSplit++;
                 currMaxSum = currNum;
             }
