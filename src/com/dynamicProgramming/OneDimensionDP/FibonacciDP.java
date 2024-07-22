@@ -11,6 +11,7 @@ public class FibonacciDP {
     public static void main(String[] args) {
         System.out.println(topDown(853));
         System.out.println(bottomUp(853));
+        System.out.println(bottomUpSpaceOptimised(853));
     }
 
     static long topDown(int n) {
@@ -44,6 +45,8 @@ public class FibonacciDP {
 
     /**
      * This is tabulation
+     * * TC --> O(n)
+     * * SC --> O(n)
      *
      * @param n
      * @return
@@ -61,5 +64,28 @@ public class FibonacciDP {
             dp[i] = dp[i - 1] % 1000000007 + dp[i - 2] % 1000000007;
         }
         return dp[n] % 1000000007;
+    }
+
+    /**
+     * Intuition here since we are just calculating numbers we don't require arrays to store it
+     * TC --> O(n)
+     * SC --> O(1)
+     *
+     * @param n
+     * @return
+     */
+    static long bottomUpSpaceOptimised(int n) {
+        if (n <= 1) {
+            return n;
+        }
+        int prev1 = 0;
+        int prev2 = 1;
+
+        for (int i = 2; i <= n; i++) {
+            int curr = prev1 % 1000000007 + prev2 % 1000000007;
+            prev1 = prev2;
+            prev2 = curr;
+        }
+        return prev2 % 1000000007;
     }
 }
