@@ -1,3 +1,16 @@
 Learning from Striver DP Series
 
 Following questions --> https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2
+
+Learning resource --> https://www.youtube.com/playlist?list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY
+
+1. Recursion: each function calls give rise to 2 more: therefore O(2^n)
+2. Memoization: stores in an array: O(n) -->
+                Sub-problem results are stored in an array, ensuring that each sub-problem is solved only once.
+3. Tabulation: iterative approach and takes O(n) sub-problems from the smallest to the largest.
+
+RECURSION: Top down: We start from answer, go to the base case and then go back
+
+MEMOIZATION: TOP DOWN:  avoids redundant calls done in recursion reducing time complexity
+
+TABULATION IS: Bottom up: We start from the base case, and we try to go to the required answer
