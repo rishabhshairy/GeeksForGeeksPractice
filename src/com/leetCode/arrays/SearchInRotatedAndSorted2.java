@@ -3,7 +3,8 @@ package com.leetCode.arrays;
 /**
  * https://leetcode.com/problems/search-in-rotated-sorted-array-ii/description/
  * There is an integer array nums sorted in non-decreasing order (not necessarily with distinct values).
- * Given the array nums after the rotation and an integer target, return true if target is in nums, or false if it is not in nums.
+ * Given the array nums after the rotation and an integer target,
+ * return true if target is in nums, or false if it is not in nums.
  */
 public class SearchInRotatedAndSorted2 {
     public static void main(String[] args) {

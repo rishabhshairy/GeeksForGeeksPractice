@@ -17,7 +17,7 @@ public class SearchInRotatedArray {
             }
 
             // check left bias
-            // checking if left half is sotrted
+            // checking if left half is sorted
             if (nums[left] <= nums[mid]) {
                 if (nums[left] <= target && target < nums[mid]) {
                     right = mid - 1;
