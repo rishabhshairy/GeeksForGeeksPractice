@@ -34,3 +34,7 @@ Once the problem has been identified, the following three steps comes handy in s
 -- If the question states
     -- Count all the ways - return sum of all choices/ways.
     -- Find maximum/minimum- return the choice/way with maximum/minimum output.
+
+For 2D DP -->
+ -- There will be more than one params which will be used to change the state
+ -- always look for changing parameters
