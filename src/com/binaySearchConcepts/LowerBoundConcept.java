@@ -9,13 +9,13 @@ package com.binaySearchConcepts;
  */
 public class LowerBoundConcept {
     public static void main(String[] args) {
-        System.out.print(findLowerBound(new int[]{3,4,4,7,8,10}, 2));
+        System.out.print(findLowerBound(new int[]{-1,-1,2,3,4,4,7,8,10}, -1));
     }
 
     public static int findLowerBound(int[] arr, int target) {
         int low = 0;
         int high = arr.length - 1;
-        int ans = arr.length; // setting hypothetical answer if we dont find any such number
+        int ans = arr.length; // setting hypothetical answer if we don't find any such number
 
         while (low <= high) {
             int mid = (low + high) / 2;

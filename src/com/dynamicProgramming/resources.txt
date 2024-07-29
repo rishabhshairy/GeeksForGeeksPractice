@@ -1,0 +1,40 @@
+Learning from Striver DP Series
+
+Following questions --> https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2
+
+Learning resource --> https://www.youtube.com/playlist?list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY
+
+1. Recursion: each function calls give rise to 2 more: therefore O(2^n)
+2. Memoization: stores in an array: O(n) -->
+                Sub-problem results are stored in an array, ensuring that each sub-problem is solved only once.
+3. Tabulation: iterative approach and takes O(n) sub-problems from the smallest to the largest.
+
+RECURSION: Top down: We start from answer, go to the base case and then go back
+
+MEMOIZATION: TOP DOWN:  avoids redundant calls done in recursion reducing time complexity
+
+TABULATION IS: Bottom up: We start from the base case, and we try to go to the required answer
+
+// Imp Notes
+
+How to Identify a DP problem?
+
+When we see a problem, it is very important to identify it as a dynamic programming problem. Generally (but not limited to) if the problem statement asks for the following:
+
+-- Count the total number of ways
+-- Given multiple ways of doing a task, which way will give the minimum or the maximum output.
+-- We can try to apply recursion. Once we get the recursive solution, we can go ahead to convert it to a dynamic programming one.
+
+Steps To Solve The Problem After Identification
+
+Once the problem has been identified, the following three steps comes handy in solving the problem:
+
+-- Try to represent the problem in terms of indexes.
+-- Try all possible choices/ways at every index according to the problem statement.
+-- If the question states
+    -- Count all the ways - return sum of all choices/ways.
+    -- Find maximum/minimum- return the choice/way with maximum/minimum output.
+
+For 2D DP -->
+ -- There will be more than one params which will be used to change the state
+ -- always look for changing parameters
