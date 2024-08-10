@@ -1,4 +1,4 @@
-package com.codingNinja.crackCodingInterview;
+package com.codingNinja.crackCodingInterview.easy;
 
 import java.util.HashMap;
 import java.util.Map;

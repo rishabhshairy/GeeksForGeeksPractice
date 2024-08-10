@@ -1,4 +1,4 @@
-package com.codingNinja.crackCodingInterview;
+package com.codingNinja.crackCodingInterview.easy;
 
 import java.util.Collections;
 import java.util.Stack;

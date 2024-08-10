@@ -1,4 +1,4 @@
-package com.codingNinja.crackCodingInterview;
+package com.codingNinja.crackCodingInterview.easy;
 
 public class SlotGame {
     public static void main(String[] args) {

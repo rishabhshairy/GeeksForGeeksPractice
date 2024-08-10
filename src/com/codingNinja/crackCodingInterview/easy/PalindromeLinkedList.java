@@ -1,4 +1,4 @@
-package com.codingNinja.crackCodingInterview;
+package com.codingNinja.crackCodingInterview.easy;
 
 import java.util.ArrayList;
 import java.util.List;

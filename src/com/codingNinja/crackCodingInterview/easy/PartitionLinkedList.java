@@ -1,4 +1,4 @@
-package com.codingNinja.crackCodingInterview;
+package com.codingNinja.crackCodingInterview.easy;
 
 public class PartitionLinkedList {
     public static Node findPartition(Node head, int X) {
