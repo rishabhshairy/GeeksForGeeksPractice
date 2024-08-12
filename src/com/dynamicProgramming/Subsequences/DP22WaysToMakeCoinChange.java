@@ -62,7 +62,7 @@ public class DP22WaysToMakeCoinChange {
 
         // base case
         for (int T = 0; T <= value; T++) {
-            dp[0][T] = value % denominations[0] == 0 ? 1 : 0;
+            dp[0][T] = T % denominations[0] == 0 ? 1 : 0;
         }
 
         for (int index = 1; index < n; index++) {
