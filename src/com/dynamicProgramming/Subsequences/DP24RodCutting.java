@@ -57,7 +57,7 @@ public class DP24RodCutting {
 
         // base case
         for (int i = 0; i <= n; i++) {
-            dp[0][i] = price[0] * n;
+            dp[0][i] = price[0] * i;
         }
 
         // form loops
@@ -67,7 +67,7 @@ public class DP24RodCutting {
                 int take = (int) Math.pow(-10, 9);
                 int rodLength = index + 1;
                 if (rodLength <= rod) {
-                    take = price[index] + dp[index][n - rodLength];
+                    take = price[index] + dp[index][rod - rodLength];
                 }
 
                 dp[index][rod] = Math.max(take, notTake);
