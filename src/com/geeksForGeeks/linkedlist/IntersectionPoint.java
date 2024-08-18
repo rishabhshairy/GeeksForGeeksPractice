@@ -12,7 +12,7 @@ public class IntersectionPoint {
             head1 = head1.next;
         }
         while (head2 != null) {
-            if (head2.data > 1000)
+            if (head2.data > 10000)
                 return (head2.data) - 10000;
             head2 = head2.next;
         }
