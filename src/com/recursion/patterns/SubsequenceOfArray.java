@@ -19,7 +19,7 @@ public class SubsequenceOfArray {
      */
     public static void subsequence(int i, Stack<Integer> nums, int n, int[] arr) {
         if (i >= n) {
-            System.out.println(nums);
+            System.out.print(nums + " , ");
             return;
         }
 
