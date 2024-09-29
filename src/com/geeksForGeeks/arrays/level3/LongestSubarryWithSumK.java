@@ -1,4 +1,4 @@
-package com.geeksForGeeks;
+package com.geeksForGeeks.arrays.level3;
 
 import java.util.HashMap;
 import java.util.Map;
