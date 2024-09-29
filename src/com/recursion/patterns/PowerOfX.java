@@ -23,10 +23,10 @@ public class PowerOfX {
         while (power > 0) {
             if (power % 2 == 0) {
                 x = x * x;
-                power = power / 2;
+                power = power / 2; // Divide the power by 2 if its even
             } else {
                 ans = ans * x;
-                power = power - 1;
+                power = power - 1; // reduce power by 1 if its odd
             }
         }
         if (n < 0) {
