@@ -1,8 +1,8 @@
 package com.geeksForGeeks.trees;
 
 public class Node {
-    int data;
-    Node left, right;
+    public int data;
+    public Node left, right;
 
     Node(int item) {
         data = item;
