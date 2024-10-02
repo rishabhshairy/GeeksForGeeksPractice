@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Stack;
-import java.util.stream.Collectors;
 
 public class PostOrderUsing2Stacks {
     public List<Integer> postorderTraversal(TreeNode root) {
@@ -27,7 +26,7 @@ public class PostOrderUsing2Stacks {
             if (root.right != null) {
                 opStack.push(root.right);
             }
-            postOrderList.add(root.data);
+            postOrderList.add(root.val);
         }
         Collections.reverse(postOrderList);
         return postOrderList;

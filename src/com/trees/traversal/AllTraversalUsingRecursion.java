@@ -27,7 +27,7 @@ public class AllTraversalUsingRecursion {
 
         traversePostOrder(root.left, postOrderList);
         traversePostOrder(root.right, postOrderList);
-        postOrderList.add(root.data);
+        postOrderList.add(root.val);
     }
 
     private static List<Integer> preorder(TreeNode root) {
@@ -42,7 +42,7 @@ public class AllTraversalUsingRecursion {
             return;
         }
 
-        preOrderList.add(root.data);
+        preOrderList.add(root.val);
         traversePreOrder(root.left, preOrderList);
         traversePreOrder(root.right, preOrderList);
     }
@@ -64,7 +64,7 @@ public class AllTraversalUsingRecursion {
         traverseInorder(root.left, inorderList);
 
         // push current node to list
-        inorderList.add(root.data);
+        inorderList.add(root.val);
 
         // recursively travel right sub tree
 

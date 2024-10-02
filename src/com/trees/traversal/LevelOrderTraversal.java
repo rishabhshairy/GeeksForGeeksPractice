@@ -2,10 +2,8 @@ package com.trees.traversal;
 
 import com.trees.TreeNode;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class LevelOrderTraversal {
     public List<List<Integer>> levelOrder(TreeNode root) {
@@ -28,10 +26,12 @@ public class LevelOrderTraversal {
                 if (nodeQueue.peek().right != null) {
                     nodeQueue.offer(nodeQueue.peek().right);
                 }
-                levelNodeList.add(nodeQueue.poll().data);
+                levelNodeList.add(nodeQueue.poll().val);
             }
             levelList.add(levelNodeList);
         }
+        levelList.stream().flatMap(list -> list.stream()).collect(Collectors.toList());
+        Collections.emptyList();
         return levelList;
     }
 }

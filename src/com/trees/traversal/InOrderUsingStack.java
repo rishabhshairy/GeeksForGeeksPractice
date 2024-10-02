@@ -20,7 +20,7 @@ public class InOrderUsingStack {
                     break;
                 }
                 node = nodeStack.pop();
-                inorderList.add(node.data);
+                inorderList.add(node.val);
                 node = node.right;
             }
         }

@@ -16,7 +16,7 @@ public class PreOrderUsingStack {
         nodeStack.push(root);
         while (!nodeStack.isEmpty()) {
             root = nodeStack.pop();
-            preOrderList.add(root.data);
+            preOrderList.add(root.val);
             if (root.right != null) {
                 nodeStack.push(root.right);
             }
