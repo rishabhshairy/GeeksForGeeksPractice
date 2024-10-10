@@ -2,6 +2,10 @@ package com.trees.binarySearchTree;
 
 import com.trees.TreeNode;
 
+/**
+ * Every Node have a range to check its value
+ * starting from [IntMin, IntMax]
+ */
 public class ValidBSTOptimal {
     public boolean isValidBST(TreeNode root) {
         return check(root, Long.MIN_VALUE, Long.MAX_VALUE);
