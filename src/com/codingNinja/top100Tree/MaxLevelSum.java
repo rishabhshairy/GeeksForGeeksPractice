@@ -30,7 +30,7 @@ public class MaxLevelSum {
 
             maxi = Math.max(maxi, sum);
         }
-        
+
         return maxi;
     }
 }
