@@ -1,5 +1,7 @@
 package com.codingNinja.top100Tree.medium;
 
+import com.codingNinja.top100Tree.BinaryTreeNode;
+
 public class MinDepth {
 
     public static int minDepth(BinaryTreeNode<Integer> root) {

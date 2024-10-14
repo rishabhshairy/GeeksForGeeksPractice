@@ -1,5 +1,7 @@
 package com.codingNinja.top100Tree.medium;
 
+import com.codingNinja.top100Tree.BinaryTreeNode;
+
 import java.util.*;
 
 public class CousinsOfNode {

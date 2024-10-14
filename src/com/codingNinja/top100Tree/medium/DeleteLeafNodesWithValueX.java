@@ -1,5 +1,7 @@
 package com.codingNinja.top100Tree.medium;
 
+import com.codingNinja.top100Tree.BinaryTreeNode;
+
 /**
  * You are given a binary tree, in which the data present in the nodes are integers. You are also given an integer X.
  * <p>

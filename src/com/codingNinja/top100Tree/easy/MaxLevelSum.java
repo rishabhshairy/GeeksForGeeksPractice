@@ -1,6 +1,6 @@
 package com.codingNinja.top100Tree.easy;
 
-import com.codingNinja.top100Tree.medium.BinaryTreeNode;
+import com.codingNinja.top100Tree.BinaryTreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;

@@ -1,5 +1,7 @@
 package com.codingNinja.top100Tree.medium;
 
+import com.codingNinja.top100Tree.BinaryTreeNode;
+
 public class LCA {
     public static int lowestCommonAncestor(BinaryTreeNode<Integer> root, int x, int y) {
         //    Write your code here.

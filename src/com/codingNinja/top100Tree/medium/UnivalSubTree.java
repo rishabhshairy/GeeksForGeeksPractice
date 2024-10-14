@@ -1,5 +1,7 @@
 package com.codingNinja.top100Tree.medium;
 
+import com.codingNinja.top100Tree.BinaryTreeNode;
+
 /**
  * LC Premium
  * You are given a binary tree. Return the count of unival sub-trees in the given binary tree.

@@ -1,4 +1,4 @@
-package com.codingNinja.top100Tree.medium;
+package com.codingNinja.top100Tree;
 
 public class BinaryTreeNode<T> {
     public T data;

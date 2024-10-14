@@ -1,6 +1,6 @@
 package com.codingNinja.top100Tree.hard;
 
-import com.codingNinja.top100Tree.medium.BinaryTreeNode;
+import com.codingNinja.top100Tree.BinaryTreeNode;
 
 import java.util.ArrayList;
 import java.util.HashMap;

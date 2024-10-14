@@ -1,5 +1,7 @@
 package com.codingNinja.top100Tree.medium;
 
+import com.codingNinja.top100Tree.BinaryTreeNode;
+
 public class MaxBinaryTree {
     public static BinaryTreeNode<Integer> constructMaximumBinaryTree(int[] tree, int n) {
         // Write your code here.

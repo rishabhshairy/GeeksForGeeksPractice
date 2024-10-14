@@ -1,5 +1,7 @@
 package com.codingNinja.top100Tree.medium;
 
+import com.codingNinja.top100Tree.BinaryTreeNode;
+
 public class PartialBST {
     /**
      * Brute Force will be to write inorder and check if the array is sorted

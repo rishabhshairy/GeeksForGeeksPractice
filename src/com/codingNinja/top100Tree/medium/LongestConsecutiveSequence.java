@@ -1,5 +1,7 @@
 package com.codingNinja.top100Tree.medium;
 
+import com.codingNinja.top100Tree.BinaryTreeNode;
+
 public class LongestConsecutiveSequence {
     public static int maxPath(BinaryTreeNode<Integer> root) {
         // Write your code here
