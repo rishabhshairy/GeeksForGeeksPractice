@@ -4,6 +4,7 @@ import com.trees.TreeNode;
 
 /**
  * https://leetcode.com/problems/recover-binary-search-tree/description/
+ * IMP --> Company Asked Questions
  */
 public class RecoverBST {
     private TreeNode first;
@@ -24,12 +25,6 @@ public class RecoverBST {
         }
     }
 
-    private void swap(TreeNode node1, TreeNode node2) {
-        int temp = node1.val;
-        node1.val = node2.val;
-        node2.val = temp;
-    }
-
     private void solveInorderSwap(TreeNode root) {
         if (root == null) {
             return;
@@ -45,5 +40,11 @@ public class RecoverBST {
         }
         prev = root;
         solveInorderSwap(root.right);
+    }
+
+    private void swap(TreeNode node1, TreeNode node2) {
+        int temp = node1.val;
+        node1.val = node2.val;
+        node2.val = temp;
     }
 }
