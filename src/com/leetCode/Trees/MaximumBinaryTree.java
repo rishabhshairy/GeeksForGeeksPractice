@@ -19,9 +19,9 @@ public class MaximumBinaryTree {
         }
 
         int maxIndex = start;
-        for (int i = start; i < end; i++) {
+        for (int i = start; i <= end; i++) {
             if (nums[maxIndex] < nums[i]) {
-                maxIndex = start;
+                maxIndex = i;
             }
         }
         TreeNode root = new TreeNode(nums[maxIndex]);

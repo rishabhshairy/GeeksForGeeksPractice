@@ -2,6 +2,9 @@ package com.trees.binarySearchTree;
 
 import com.geeksForGeeks.trees.Node;
 
+/**
+ * This is optimal solution
+ */
 public class InorderSuccessorBST {
 
     /**
