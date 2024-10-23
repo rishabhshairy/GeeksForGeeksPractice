@@ -28,6 +28,11 @@ public class CycleDetectionBFS {
         List<List<Integer>> adjacencyList = generateAdjList(edges, n);
 
         boolean[] visited = new boolean[n + 1];
+        /**
+         * Here, we also solve cycle in connected components, as
+         * we traverse all the nodes to check, since from edges we will not know
+         * how many vertices are connected.
+         */
         for (int i = 1; i <= n; i++) {
             if (!visited[i]) {
                 if (checkCycleBFS(i, visited, adjacencyList)) {
