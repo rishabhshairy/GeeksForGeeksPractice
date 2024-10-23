@@ -1,4 +1,4 @@
-package com.slidingwindow;
+package com.slidingwindow.medium;
 
 /**
  * LC 1343 --> https://leetcode.com/problems/number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/description/
