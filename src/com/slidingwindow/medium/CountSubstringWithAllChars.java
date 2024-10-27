@@ -13,7 +13,7 @@ import java.util.Set;
 public class CountSubstringWithAllChars {
 
     public static void main(String[] args) {
-//        System.out.println(numberOfSubstrings("abcabc"));
+        System.out.println(numberOfSubstrings("abcabc"));
     }
 
     /**
@@ -24,7 +24,7 @@ public class CountSubstringWithAllChars {
      * @param s
      * @return
      */
-    public int numberOfSubstrings(String s) {
+    public static int numberOfSubstrings(String s) {
         Map<Character, Integer> map = new HashMap<>();
         int left = 0, right = 0, count = 0;
 
@@ -36,6 +36,7 @@ public class CountSubstringWithAllChars {
                     && map.getOrDefault('b', 0) > 0
                     && map.getOrDefault('c', 0) > 0) {
                 count += s.length() - right;
+                System.out.println(count);
                 key = s.charAt(left);
                 map.put(key, map.get(key) - 1);
                 left++;
