@@ -44,6 +44,7 @@ public class EventfulSafeNodes {
             }
         }
         pathVisited[currNode] = false;
+        // marking safe node here as we didn't find any cycle on the path
         isSafeNode[currNode] = true;
         return false;
     }
