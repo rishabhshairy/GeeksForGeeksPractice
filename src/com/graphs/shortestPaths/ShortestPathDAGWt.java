@@ -36,8 +36,8 @@ public class ShortestPathDAGWt {
                 dfsTopo(i, visited, adjacencyList, nodeStack);
             }
         }
-        System.out.println(nodeStack);
 
+        // Step 3 --> use the sorted array obtained and do BFS kind of traversal to find the shortest distance
         int[] distance = new int[v];
         Arrays.fill(distance, (int) 1e9);
         distance[0] = 0;
@@ -59,7 +59,7 @@ public class ShortestPathDAGWt {
             if (distance[i] == 1e9) {
                 distance[i] = -1;
             }
-            System.out.println(distance[i]);
+            System.out.print(distance[i]+" ");
         }
         return distance;
     }
