@@ -1,4 +1,4 @@
-package com.learngraphs;
+package com.graphs.bfsDfs;
 
 import java.util.ArrayList;
 import java.util.Arrays;
