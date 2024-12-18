@@ -8,7 +8,7 @@ package com.binaySearchConcepts;
  */
 public class UpperBoundConcept {
     public static void main(String[] args) {
-        System.out.print(findUpperBound(new int[]{3, 5, 8, 15, 19}, 20));
+        System.out.print(findUpperBound(new int[]{3, 5, 8, 15, 19}, 9));
     }
 
     public static int findUpperBound(int[] arr, int target) {
