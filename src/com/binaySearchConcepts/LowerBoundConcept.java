@@ -9,7 +9,7 @@ package com.binaySearchConcepts;
  */
 public class LowerBoundConcept {
     public static void main(String[] args) {
-        System.out.print(findLowerBound(new int[]{-1,-1,2,3,4,4,7,8,10}, 1));
+        System.out.print(findLowerBound(new int[]{1,2,4,4,5,7,9}, 4));
     }
 
     public static int findLowerBound(int[] arr, int target) {

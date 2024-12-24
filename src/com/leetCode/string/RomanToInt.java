@@ -1,10 +1,10 @@
-package com.leetCode.arrays;
+package com.leetCode.string;
 
 import java.util.HashMap;
 
 public class RomanToInt {
     public static void main(String[] args) {
-        String s = "IV";
+        String s = "MCMXCIV";
         System.out.println(convert(s));
     }
 

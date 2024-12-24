@@ -5,7 +5,7 @@ package com.leetCode.binarySearch;
  */
 public class KokoEatingBanana {
     public static void main(String[] args) {
-        System.out.println(minEatingSpeed(new int[]{805306368,805306368,805306368}, 1000000000));
+        System.out.println(minEatingSpeed(new int[]{3, 6, 7, 11}, 8));
     }
 
     public static int minEatingSpeed(int[] piles, int hours) {
@@ -15,8 +15,9 @@ public class KokoEatingBanana {
 
         while (low <= high) {
             int mid = (low + high) / 2;
+            System.out.println(mid);
             int totalHours = findTotalHours(piles, mid);
-            System.out.println(totalHours);
+
             if (totalHours <= hours && totalHours > 0) { // add condition totalHours > 0 to check for overflow
                 ans = mid;
                 high = mid - 1;

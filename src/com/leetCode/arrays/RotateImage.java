@@ -38,7 +38,8 @@ public class RotateImage {
                 matrix[j][i] = temp;
             }
         }
-
+        printMatrix(matrix,matrix.length,matrix[0].length);
+        System.out.println();
         // now to rotate 90 degrees reverse each column
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < row / 2; j++) {

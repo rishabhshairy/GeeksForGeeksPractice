@@ -1,4 +1,4 @@
-package com.leetCode.DP;
+package com.dynamicProgramming.OneDimensionDP;
 
 import java.util.Arrays;
 
