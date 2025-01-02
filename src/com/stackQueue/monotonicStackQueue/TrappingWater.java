@@ -1,12 +1,49 @@
-package com.geeksForGeeks.arrays.level2;
+package com.stackQueue.monotonicStackQueue;
 
 public class TrappingWater {
     public static void main(String[] args) {
-        int[] a = {3, 0, 2, 0, 4};
+        int[] a = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
         int n = a.length;
-        System.out.println(trappingWater(a, n));
+        System.out.println(trap(a));
     }
 
+    /**
+     * Two pointer approach
+     *
+     * @param height
+     * @return
+     */
+    public static int trap(int[] height) {
+        int left = 0, right = height.length - 1;
+        int leftMax = 0, rightMax = 0, total = 0;
+
+        while (left < right) {
+            if (height[left] < height[right]) {
+                if (leftMax > height[left]) {
+                    total += leftMax - height[left];
+                } else {
+                    leftMax = height[left];
+                }
+                left++;
+            } else {
+                if (rightMax > height[right]) {
+                    total += rightMax - height[right];
+                } else {
+                    rightMax = height[right];
+                }
+                right--;
+            }
+        }
+        return total;
+    }
+
+    /**
+     * This is left max and right max approach
+     *
+     * @param a
+     * @param n
+     * @return
+     */
     private static int waterStored(int[] a, int n) {
 
         int trappedWater = 0;
