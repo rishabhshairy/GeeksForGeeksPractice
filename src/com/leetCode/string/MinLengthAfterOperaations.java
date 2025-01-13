@@ -1,5 +1,6 @@
 package com.leetCode.string;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -10,7 +11,43 @@ import java.util.Set;
 public class MinLengthAfterOperaations {
     public static void main(String[] args) {
         String s = "abaacbcbb";
-        System.out.println(minimumLength(s));
+        System.out.println(minimumLengthOptimal(s));
+    }
+
+    private static int minimumLengthOptimal(String s) {
+        if (s.length() <= 2) {
+            return s.length();
+        }
+        int[] freq = new int[26];
+        for (Character ch : s.toCharArray()) {
+            freq[ch - 'a']++;
+        }
+
+        for (int f : freq) {
+            System.out.print(f + " ");
+        }
+
+        for (int i = 0; i < freq.length; i++) {
+            if (freq[i] <= 2) {
+                continue;
+            } else {
+                if (freq[i] % 2 == 0) {
+                    while (freq[i] > 2) {
+                        freq[i]--;
+                    }
+                } else {
+                    while (freq[i] > 1) {
+                        freq[i]--;
+                    }
+                }
+
+            }
+        }
+        System.out.println();
+        for (int f : freq) {
+            System.out.print(f + " ");
+        }
+        return Arrays.stream(freq).sum();
     }
 
     public static int minimumLength(String s) {
