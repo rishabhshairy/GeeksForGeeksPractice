@@ -23,6 +23,8 @@ public class FindMedianFromDataStream {
             if (len % 2 != 0) {
 
             }
+            return 0;
         }
+
     }
 }

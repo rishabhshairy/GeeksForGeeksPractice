@@ -16,6 +16,33 @@ public class MoveZeros {
         }
     }
 
+
+    /**
+     * Two pointer
+     *
+     * @param nums
+     */
+    public void moveZeroesOptimal(int[] nums) {
+        int slow = 0;
+        for (int fast = 0; fast < nums.length; fast++) {
+            if (nums[slow] != 0 && nums[fast] == 0) {
+                swap(nums, slow, fast);
+                slow = fast;
+            }
+        }
+    }
+
+    private void swap(int[] nums, int a, int b) {
+        int temp = nums[a];
+        nums[a] = nums[b];
+        nums[b] = temp;
+    }
+
+    /**
+     * Space O(n)
+     *
+     * @param nums
+     */
     public void moveZeroes(int[] nums) {
         int zeros = 0;
         int p2 = 0;
