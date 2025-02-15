@@ -22,6 +22,12 @@ public class SortLLUsingMergeSort {
     }
 
     private ListNode merge(ListNode left, ListNode right) {
+        if (left == null) {
+            return right;
+        }
+        if (right == null) {
+            return left;
+        }
         ListNode dummy = new ListNode(-1);
         ListNode temp = dummy;
 
@@ -29,12 +35,14 @@ public class SortLLUsingMergeSort {
         while (left != null && right != null) {
             if (left.val <= right.val) {
                 temp.next = left;
+                temp = left;
                 left = left.next;
             } else {
                 temp.next = right;
+                temp=right;
                 right = right.next;
             }
-            temp = temp.next;
+
         }
 
         // append remaining list

@@ -5,6 +5,15 @@ import com.geeksForGeeks.trees.Node;
 import java.util.*;
 
 public class BottomView {
+    static class TupleBottom {
+        Node node;
+        int level;
+
+        public TupleBottom(Node node, int level) {
+            this.node = node;
+            this.level = level;
+        }
+    }
     public ArrayList<Integer> bottomView(Node root) {
         // Code here
         if (root == null) {
@@ -42,12 +51,3 @@ public class BottomView {
     }
 }
 
-class TupleBottom {
-    Node node;
-    int level;
-
-    public TupleBottom(Node node, int level) {
-        this.node = node;
-        this.level = level;
-    }
-}

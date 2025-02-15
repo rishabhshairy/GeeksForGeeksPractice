@@ -5,6 +5,16 @@ import com.geeksForGeeks.trees.Node;
 import java.util.*;
 
 public class TopView {
+    static class TupleTop {
+        Node node;
+        int level;
+
+        public TupleTop(Node node, int level) {
+            this.node = node;
+            this.level = level;
+        }
+    }
+
     static ArrayList<Integer> topView(Node root) {
         // add your code
         if (root == null) {
@@ -42,12 +52,3 @@ public class TopView {
     }
 }
 
-class TupleTop {
-    Node node;
-    int level;
-
-    public TupleTop(Node node, int level) {
-        this.node = node;
-        this.level = level;
-    }
-}

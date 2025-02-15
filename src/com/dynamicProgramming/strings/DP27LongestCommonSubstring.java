@@ -4,7 +4,30 @@ public class DP27LongestCommonSubstring {
     public static void main(String[] args) {
         String s1 = "wasdijkl";
         String s2 = "wsdjkl";
-        System.out.println(lcs(s1, s2));
+//        System.out.println(lcs(s1, s2));
+        System.out.println(lcsRecusrsive(s1, s2));
+    }
+
+    private static int lcsRecusrsive(String s1, String s2) {
+        int n = s1.length();
+        int m = s2.length();
+        return solve(n, m, n - 1, m - 1, s1, s2, 0);
+    }
+
+    private static int solve(int n, int m, int index1, int index2, String s1, String s2, int maxi) {
+        if (index1 == 0 || index2 == 0) {
+            return maxi;
+        }
+
+        if (s1.charAt(index1) == s2.charAt(index2)) {
+            maxi = solve(n, m, index1 - 1, index2 - 1, s1, s2, maxi + 1);
+        }
+
+        int prev1 = solve(n, m, index1, index2 - 1, s1, s2, 0);
+        int prev2 = solve(n, m, index1 - 1, index2, s1, s2, 0);
+
+        maxi = Math.max(maxi, Math.max(prev1, prev2));
+        return maxi;
     }
 
     /**
