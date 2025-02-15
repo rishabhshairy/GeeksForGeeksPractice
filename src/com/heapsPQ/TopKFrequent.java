@@ -14,6 +14,12 @@ public class TopKFrequent {
         }
     }
 
+    /**
+     * @implNote Heap Approach will use lots of space
+     * @param nums
+     * @param k
+     * @return
+     */
     static int[] topKFrequent(int[] nums, int k) {
         int[] answer = new int[k];
         TreeMap<Integer, Integer> freqMap = new TreeMap<>();
