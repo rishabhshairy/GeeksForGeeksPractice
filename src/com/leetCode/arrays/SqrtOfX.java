@@ -2,7 +2,7 @@ package com.leetCode.arrays;
 
 public class SqrtOfX {
     public static void main(String[] args) {
-        int n = 8;
+        int n = 2147395600;
         System.out.println(mySqrt(n));
         System.out.println(sqrtBruteForce(n));
     }
