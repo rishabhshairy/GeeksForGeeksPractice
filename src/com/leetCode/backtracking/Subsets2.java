@@ -5,6 +5,10 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Subsets2 {
+    public static void main(String[] args) {
+        Subsets2 obj = new Subsets2();
+        obj.subsetsWithDup(new int[]{1,1,2});
+    }
     public List<List<Integer>> subsetsWithDup(int[] nums) {
         List<List<Integer>> answer = new ArrayList<>();
         if (nums.length == 0) {
@@ -13,6 +17,7 @@ public class Subsets2 {
         }
         Arrays.sort(nums);
         solve(nums, 0, answer, new ArrayList<Integer>());
+        System.out.println(answer);
         return answer;
     }
 
